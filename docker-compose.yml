@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  wordpress:
+    image: liticia659/wordpressdockfile:1.0
+    networks:
+      - frontend_network
+      - backend_network
+    ports:
+      - "80:80"
+    volumes:
+      - /mnt/c/Users/hp/Desktop/projetDocker/frontend:/var/www/html
+    depends_on:
+      - mariadb
+    environment:
+      - WORDPRESS_DB_HOST=mariadb
+      - WORDPRESS_DB_NAME=my_wp_db
+      - WORDPRESS_DB_USER=my_wp_user
+      - WORDPRESS_DB_PASSWORD=my_wp_password
+
+  mariadb:
+    image: liticia659/mariadbdockfile:1.0
+    networks:
+      - backend_network
+    volumes:
+      - ./path/to/mysql-data:/var/lib/mysql
+      - /mnt/c/Users/hp/Desktop/projetDocker/my.cnf:/etc/mysql/my.cnf 
+    environment:
+      - MYSQL_ROOT_PASSWORD=my_root_password
+      - MYSQL_DATABASE=my_wp_db
+      - MYSQL_USER=my_wp_user
+      - MYSQL_PASSWORD=my_wp_password
+
+networks:
+  frontend_network:
+    driver: bridge
+  backend_network:
+    driver: bridge

@@ -1,0 +1,8 @@
+# Utiliser une image MariaDB officielle
+FROM mariadb:latest
+
+# Variables d'environnement pour configurer la base de données MariaDB
+ENV MYSQL_ROOT_PASSWORD=my_root_password
+ENV MYSQL_DATABASE=my_wp_db
+ENV MYSQL_USER=my_wp_user
+ENV MYSQL_PASSWORD=my_wp_password
