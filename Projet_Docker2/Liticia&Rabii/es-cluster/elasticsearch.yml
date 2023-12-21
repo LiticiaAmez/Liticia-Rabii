@@ -1,0 +1,11 @@
+network.host: 0.0.0.0
+discovery.seed_hosts:
+  - elasticsearch-node1
+  - elasticsearch-node2
+  - elasticsearch-node3
+cluster.initial_master_nodes:
+  - elasticsearch-node1
+  - elasticsearch-node2
+  - elasticsearch-node3
+cluster.name: docker-cluster
+
