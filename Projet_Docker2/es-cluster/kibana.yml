@@ -1,0 +1,9 @@
+# Configuration pour définir le nom du serveur Kibana
+server.name: kibana
+
+# Configuration pour spécifier l'hôte réseau auquel Kibana doit écouter
+# 0.0.0.0 signifie que Kibana écoutera sur toutes les interfaces réseau disponibles
+network.host: 0.0.0.0
+
+# Configuration pour définir les hôtes Elasticsearch auxquels Kibana se connectera
+elasticsearch.hosts: ["http://elasticsearch-node1:9200"]
