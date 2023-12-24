@@ -6,4 +6,4 @@ server.name: kibana
 network.host: 0.0.0.0
 
 # Configuration pour définir les hôtes Elasticsearch auxquels Kibana se connectera
-elasticsearch.hosts: ["http://elasticsearch-node1:9200"]
+elasticsearch.hosts: ["http://es01:9200"]
