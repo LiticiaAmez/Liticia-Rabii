@@ -2,13 +2,13 @@ cluster.name: "docker-cluster" # Définit le nom du cluster Elasticsearch
 network.host: 0.0.0.0 # Spécifie l'hôte réseau auquel Elasticsearch doit se lier
 
 discovery.seed_hosts: [
-    "elasticsearch-node1",
-    "elasticsearch-node2",
-    "elasticsearch-node3",
+    "es01",
+    "es02",
+    "es03",
   ] # Liste des nœuds de découverte que chaque nœud doit contacter
 cluster.initial_master_nodes: [
-    "elasticsearch-node1",
-    "elasticsearch-node2",
-    "elasticsearch-node3",
+    "es01",
+    "es02",
+    "es03",
   ] # Liste des nœuds initiaux du cluster
 
